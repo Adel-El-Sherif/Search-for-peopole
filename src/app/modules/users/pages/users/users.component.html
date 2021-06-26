@@ -1,0 +1,36 @@
+<!-- ______ begin filtration seaction _______ -->
+<section class="pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="control-wrapper text-center">
+            <mat-form-field class="example-full-width">
+              <mat-label>search For People</mat-label>
+              <input matInput [(ngModel)]="userName" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ______ end filtration seaction _______ -->
+  
+  <!-- ________ begin user list section _______ -->
+  <section class="py-3 py-lg-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box mb-3" *ngFor="let user of users | search: 'first_name': userName ; let index = index" cdkDrag>
+              <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                <!-- _____ begin user card component ______ -->
+                <app-user-card [user]="user" [index]="index"></app-user-card>
+                <!-- _____ end user card component ______ -->
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ________ end user list section _______ -->
+  

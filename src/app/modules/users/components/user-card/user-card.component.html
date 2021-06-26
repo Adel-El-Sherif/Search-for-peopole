@@ -1,0 +1,20 @@
+<mat-card class="example-card user-card text-center w-100">
+    <div class="user-card__order">
+      {{index + 1}}
+    </div>
+    <mat-card-header>
+      <div mat-card-avatar class="user-card__avatar example-header-image">
+        <img [src]="user?.avatar" [alt]="user?.first_name">
+      </div>
+      <mat-card-title class="d-block user-card__name my-2">
+        {{ user?.first_name  + ' ' +  user?.last_name}}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="user-card__email">
+          <a [href]="user.email" target="_blanck">
+            {{ user?.email }}
+          </a>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,57 @@
+:host {
+    width: 100%;
+}
+
+.mat-card {
+    background-color: #141414;
+}
+
+.mat-card-header {
+    flex-direction: column;
+    align-items: center;
+}
+
+.mat-card-avatar {
+    height: 70px;
+    width: 70px;
+}
+
+.user-card__avatar {
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.user-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-card__name {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.user-card__email a {
+    color:#f1a24f;
+    font-size: small;
+}
+
+.user-card__order {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: #f1a24f;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    display: flex;
+    LEFT: C;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+}
