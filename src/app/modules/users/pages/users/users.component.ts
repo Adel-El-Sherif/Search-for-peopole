@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { FormControl } from '@angular/forms';
 import { UsersService } from 'src/app/modules/users/services/users.service';
 import { User } from '../../models/user';
 import { Subscription } from 'rxjs';
@@ -13,12 +12,18 @@ import { Subscription } from 'rxjs';
 export class UsersComponent implements OnInit, OnDestroy {
 
   // begin properties ________
-  users: User[];
+  users: User[] = [];
   userName: any;
   private subscriptions: Subscription[] = [];
   // end properties ________
 
+  // begin booleans _______
+  loading: boolean;
+  // end booleans _______
+
   constructor(private  _UsersService: UsersService) {
+    console.log('auk', this.users.length);
+    
   }
 
   ngOnInit(): void {

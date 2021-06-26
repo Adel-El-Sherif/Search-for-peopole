@@ -1,3 +1,7 @@
+<!-- _____________ begin loader __________ -->
+<app-loader *ngIf="loading"></app-loader>
+<!-- _____________ begin loader __________ -->
+
 <!-- ______ begin filtration seaction _______ -->
 <section class="pt-5">
     <div class="container">
@@ -24,7 +28,7 @@
             <div class="example-box mb-3" *ngFor="let user of users | search: 'first_name': userName ; let index = index" cdkDrag>
               <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
                 <!-- _____ begin user card component ______ -->
-                <app-user-card [user]="user" [index]="index"></app-user-card>
+                <app-user-card class="user-card" [user]="user" [index]="index"></app-user-card>
                 <!-- _____ end user card component ______ -->
               </div>
           </div>

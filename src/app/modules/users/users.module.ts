@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { SearchPipe } from './pipes/search/search.pipe';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { MatCardModule } from '@angular/material/card';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     FormsModule,
     UsersRoutingModule,
-    MatCardModule
+    MatCardModule,
+    SharedModule,
   ],
 })
 export class UsersModule { }

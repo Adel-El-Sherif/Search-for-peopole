@@ -1,0 +1,30 @@
+
+.loader-wrapper {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(0, 0, 0,.8);
+}
+
+.loader {
+    border: 5px solid #141414; /* Light grey */
+    border-top: 5px solid #f1a24f; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* begin spiner animation ___ */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* end spiner animation ___ */
+
+  
